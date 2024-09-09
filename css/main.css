@@ -108,18 +108,25 @@ header{
     height: 300px;
 }
 .landing{
+    display: flex;
     width: 100%;
     min-height: calc(100dvh - 50px);
-    background-image: url("../img/mountanb.JPG");
-    background-size: cover;
-    background-position: center center;
+    padding: 0px 10%;
+    background: linear-gradient(rgb(20, 18, 18),rgba(94, 7, 234, 0.537));
     background-attachment: fixed;
+    img{
+        width: 50%;
+        max-width: 40%;
+    }
     .intro{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        max-width: 100%;
-        transform: translate(-50%,-50%);
+        text-align: center;
+        width: 60%;
+        min-height: 100%;
+        max-width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         h1{
             margin: 0px;
             font-size:3em;
@@ -229,9 +236,12 @@ header{
 }
 .sph+p{
     text-align: center;
+    margin:auto;
     margin-top: 0px;
     margin-bottom:60px;
     color: rgba(255, 255, 255, 0.664);
+    width: 400px;
+    max-width: 90%;
 }
 .protfolio{
     padding-top: 60px;
@@ -253,7 +263,7 @@ header{
                 border-radius: 0px 0px 10px 10px;
                 background-color:rgb(4, 68, 74);
                 h3{
-                    margin: 0px;
+                    margin: 10px 0px;
                 }
                 p{
                     color: rgba(255, 255, 255, 0.664);
@@ -306,6 +316,72 @@ header{
             font-size: 1.5em;
             font-weight: bold;
            }
+        }
+    }
+}
+.contact{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: linear-gradient(135deg,rgb(4, 68, 74),var(--mcolor));
+    background-attachment: fixed;
+    .container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+        gap: 30px;
+        color: white;
+        align-items: center;
+        form,.social{
+            width: 100%;
+            padding: 10px;
+            outline: rgba(255, 255, 255, 0.573) solid 3px;
+            border-radius: 10px;
+            background-color: rgb(46, 42, 42);
+            input{
+                padding: 10px;
+                color: white;
+                width: 90%;
+                margin: 20px 5%;
+                background-color: transparent;
+                outline: none;
+                border-radius: 10px;
+                border: 2px solid rgba(97, 242, 255, 0.548);
+                border-right: none;
+                border-top: none;
+            }
+            input:last-child{
+                background-color:var(--acscolr);
+                font-weight: bold;
+                cursor: pointer;
+            }
+            input:focus{
+                border: none;
+                outline: solid 2px  rgba(97, 242, 255, 0.548) ;
+            }
+            span{
+                display: block;
+                color: var(--mcolor);
+                font-size: 1.4em;
+            }
+            .links{
+                padding: 20px;
+                display: flex;
+                justify-content: space-around;
+                a{
+                    text-decoration: none;
+                    font-size: 2em;
+                    color:white;
+                    transition: all 200ms;
+                }
+                a:hover{
+                    color: var(--acscolr);
+                }
+            }
+        }
+        span{
+            font-size: 3em;
+            text-align: center;
+            font-weight: bold;
+            color:white;
         }
     }
 }
