@@ -7,6 +7,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     font-family: work sans;
+    scroll-behavior: smooth;
 }
 :root{
     --mcolor:rgb(97, 242, 255);
@@ -108,11 +109,14 @@ header{
     height: 300px;
 }
 .landing{
+    background-image: url("../img/back.svg");
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size:50%;
     display: flex;
     width: 100%;
     min-height: calc(100dvh - 50px);
     padding: 0px 10%;
-    background: linear-gradient(rgb(20, 18, 18),rgba(94, 7, 234, 0.537));
     background-attachment: fixed;
     img{
         width: 50%;
@@ -120,9 +124,7 @@ header{
     }
     .intro{
         text-align: center;
-        width: 60%;
         min-height: 100%;
-        max-width: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -145,6 +147,13 @@ header{
         }
     }
 }
+@media (max-width: 600px) {
+    .landing{
+        background-position: center;
+        background-size: 100%;
+    }
+}
+
 .features{
     padding-top: 60px;
     padding-bottom: 60px;
@@ -320,22 +329,29 @@ header{
     }
 }
 .contact{
+    position: relative;
     padding-top: 60px;
     padding-bottom: 60px;
-    background: linear-gradient(135deg,rgb(4, 68, 74),var(--mcolor));
-    background-attachment: fixed;
     .container{
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
-        gap: 30px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        border-radius: 15px;
+        background-color: rgba(255, 255, 255, 0.274);
+        backdrop-filter: blur(10px);
+        box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.126);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
         color: white;
         align-items: center;
         form,.social{
-            width: 100%;
+            width: 400px;
+            max-width: 90%;
             padding: 10px;
             outline: rgba(255, 255, 255, 0.573) solid 3px;
             border-radius: 10px;
             background-color: rgb(46, 42, 42);
+            margin: auto;
             input{
                 padding: 10px;
                 color: white;
@@ -344,9 +360,7 @@ header{
                 background-color: transparent;
                 outline: none;
                 border-radius: 10px;
-                border: 2px solid rgba(97, 242, 255, 0.548);
-                border-right: none;
-                border-top: none;
+                border: none;
             }
             input:last-child{
                 background-color:var(--acscolr);
@@ -359,7 +373,6 @@ header{
             }
             span{
                 display: block;
-                color: var(--mcolor);
                 font-size: 1.4em;
             }
             .links{
@@ -378,10 +391,37 @@ header{
             }
         }
         span{
-            font-size: 3em;
+            font-size: 2em;
             text-align: center;
             font-weight: bold;
             color:white;
+            text-align: center;
+            display: block;
         }
+    }
+    .de{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        height: 60%;
+        background-color:var(--acscolr);
+        transform: translate(-50%, -50%);
+    }
+    .headline,.det{
+        max-width: 90%;
+    }
+    .sph{
+        font-size: 4em;
+    }
+}
+footer{
+    margin-top: 60px;
+    background-color: var(--acscolr);
+    .container{
+        color: white;
+        text-align: center;
+        padding: 6px;
+        font-size: .7em;
     }
 }
