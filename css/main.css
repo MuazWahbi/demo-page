@@ -109,7 +109,7 @@ header{
     height: 300px;
 }
 .landing{
-    background-image: url("../img/back.svg");
+    background-image: url("../img/1m.svg");
     background-position: center right;
     background-repeat: no-repeat;
     background-size:50%;
@@ -148,8 +148,8 @@ header{
 }
 @media (max-width: 600px) {
     .landing{
-        background-position: center;
-        background-size: 100%;
+        background-size: 700px;
+        background-position: center bottom;
     }
 }
 
