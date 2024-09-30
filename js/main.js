@@ -31,3 +31,13 @@ document.addEventListener("click", function(e){
         nav.classList.remove("navanimation")
     }
 })
+
+function sendMail(){
+    let prams = {
+        name : document.getElementById("name").value,
+        emai : document.getElementById("email").value,
+        title : document.getElementById("title").value,
+        message : document.getElementById("message").value
+    }
+    emailjs.send("service_ej3sqac","template_c42r5tq",prams)
+}

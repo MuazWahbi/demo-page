@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/fontawesome-free-6.4.2-web/css/all.css">
     <title>demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+            publicKey: "oSysVjSvPp804q6pJ",
+            });
+        })();
+    </script>
 </head>
 <body>
     <header>
@@ -198,15 +207,15 @@
                     <span>
                         send me email
                     </span>
-                    <input type="text" placeholder="your name">
-                    <input type="email" placeholder="your Email">
-                    <input type="text" placeholder="title">
-                    <input type="textarea" placeholder="message">
-                    <input type="submit" value="send">
+                    <input type="text" placeholder="your name" id="name">
+                    <input type="email" placeholder="your Email" id="email">
+                    <input type="text" placeholder="title" id="title">
+                    <input type="textarea" placeholder="message" id="message">
+                    <input type="submit" value="send" onclick="sendMail()">
                 </form>
                 <span>or</span>
                 <div class="social">
-                    <span>get n tuock on</span>
+                    <span>get in touch on </span>
                     <div class="links">
                         <a href="https://sd.linkedin.com/in/muaz-wahbi-6483ba262">
                             <i class="fa-brands fa-linkedin"></i>
